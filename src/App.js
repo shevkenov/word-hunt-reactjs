@@ -25,7 +25,7 @@ function App() {
     },
   }));
 
-  const translate = React.useCallback( async () => {
+  const translate = React.useCallback(async () => {
     try {
       const response = await dictionaryApi.get(`${language}/${word}`);
 
@@ -67,9 +67,13 @@ function App() {
           setLanguage={setLanguage}
           lightMode={lightMode}
         />
-        {meanings && (
-          <Definitions lightMode={lightMode} meanings={meanings} word={word} language={language} />
-        )}
+
+        <Definitions
+          lightMode={lightMode}
+          meanings={meanings}
+          word={word}
+          language={language}
+        />
       </Container>
     </div>
   );

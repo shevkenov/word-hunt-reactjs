@@ -4,7 +4,7 @@ import "./Definitions.css";
 const Definitions = ({ meanings, word, language, lightMode }) => {
   return (
     <div className="meanings">
-      {meanings[0].phonetics[0].audio && word && language === "en" && (
+      {meanings[0]?.phonetics[0].audio && word && language === "en" && (
         <div className="audio">
           <audio
             src={meanings[0].phonetics[0].audio}
@@ -16,7 +16,7 @@ const Definitions = ({ meanings, word, language, lightMode }) => {
         </div>
       )}
 
-      {word ? (
+      {meanings && word ? (
         meanings.map((mean) =>
           mean.meanings.map((item) =>
             item.definitions.map((def, inx) => (
