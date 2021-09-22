@@ -1,2 +1,1 @@
-webpage
-https://word-shoot.netlify.app/
+Word translater using 9 (nine) languages!
