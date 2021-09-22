@@ -1,0 +1,40 @@
+.meanings{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    border: 10px solid #757575;
+    border-radius: 15px;
+    height: 420px;
+    scrollbar-width: thin;
+}
+
+.subtitle{
+    font-size: 5vw;
+    font-family: "Montserrat", sans-serif;
+}
+
+.def{
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 4px;
+}
+
+.example, .synonyms{
+    margin: 4px;
+}
+
+.audio{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+audio{
+    width: 100%;
+}
+
+@media (max-width){
+    .meanings{
+        height: 50vh;
+    }
+}
